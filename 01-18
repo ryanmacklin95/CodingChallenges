@@ -1,34 +1,24 @@
-additivePersistence(x){
-    x + '';
-    let ans = 0;
+ function additivePersistence(x){
+    x += '';
     let math = 0;
     if(x.length == 1){
-        return ans;
+        return 0;
     }else{
         for(let i = 0; i < x.length; i++){
-            math += x[i];
-            if(math.length != 1){
-                ans++;
-                additivePersistence(x);
-            }
+            math += x[i] -0;
         }
     }
-    return ans;
+    return 1 + additivePersistence(math);
 }
-multiplicativePersistence(x){
-    x + '';
-    let ans = 0;
-    let math = 0;
+function multiplicativePersistence(x){
+    x += '';
+    let math = 1;
     if(x.length == 1){
-        return ans;
+        return 0;
     }else{
         for(let i = 0; i < x.length; i++){
-            math *= x[i];
-            if(math.length != 1){
-                ans++;
-                multiplicativePersistence(x);
-            }
+            math *= x[i] -0;
         }
     }
-    return ans;
+    return 1 + multiplicativePersistence(math);
 }
