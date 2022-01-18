@@ -1,4 +1,5 @@
 additivePersistence(x){
+    x + '';
     let ans = 0;
     let math = 0;
     if(x.length == 1){
@@ -15,6 +16,7 @@ additivePersistence(x){
     return ans;
 }
 multiplicativePersistence(x){
+    x + '';
     let ans = 0;
     let math = 0;
     if(x.length == 1){
