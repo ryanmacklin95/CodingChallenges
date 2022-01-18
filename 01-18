@@ -1,0 +1,32 @@
+additivePersistence(x){
+    let ans = 0;
+    let math = 0;
+    if(x.length == 1){
+        return ans;
+    }else{
+        for(let i = 0; i < x.length; i++){
+            math += x[i];
+            if(math.length != 1){
+                ans++;
+                additivePersistence(x);
+            }
+        }
+    }
+    return ans;
+}
+multiplicativePersistence(x){
+    let ans = 0;
+    let math = 0;
+    if(x.length == 1){
+        return ans;
+    }else{
+        for(let i = 0; i < x.length; i++){
+            math *= x[i];
+            if(math.length != 1){
+                ans++;
+                multiplicativePersistence(x);
+            }
+        }
+    }
+    return ans;
+}
