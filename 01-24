@@ -1,0 +1,25 @@
+isDisarium(75)
+isDisarium(135)
+isDisarium(518)
+isDisarium(544)
+isDisarium(8)
+isDisarium(466);
+
+function isDisarium(num){
+  let uhh = 0;
+  num += '';
+  
+  if(num.length == 1){
+    return true;
+  }
+  
+  for(let i = 0; i < num.length; i++){
+    uhh += (Math.pow(num[i], (i + 1) ));
+  }
+  
+ if(uhh == num){
+   return true;
+ }else{
+   return false;
+ }
+}
